@@ -64,3 +64,11 @@ const typed = new Typed('.multiple-text', {
     backDelay: 100,
     loop: true
 });
+
+const typed1 = new Typed('.multiple-text-1', {
+    strings: ['MERN stack Developer!', 'Frontend Developer!', 'Backend Developer!', 'JavaScript developer!', 'React.js Developer!', 'Programmer!'],
+    typedSpeed: 50,
+    backSpeed: 100,
+    backDelay: 100,
+    loop: true
+});
