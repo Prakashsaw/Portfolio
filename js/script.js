@@ -58,7 +58,7 @@ ScrollReveal().reveal('.home-content p, .about-content', {origin: 'right' });
 
 /*##################### Typed js used for multiple text show ######################*/
 const typed = new Typed('.multiple-text', {
-    strings: ['Frontend Developer!', 'Backend Developer!', 'JavaScript developer!', 'React.js Developer!', 'Programmer!'],
+    strings: ['MERN stack Developer!', 'Frontend Developer!', 'Backend Developer!', 'JavaScript developer!', 'React.js Developer!', 'Programmer!'],
     typedSpeed: 50,
     backSpeed: 100,
     backDelay: 100,
