@@ -184,15 +184,15 @@
 
         <form action="#">
             <div class="input-box">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Full Name" id="name" required>
+                <input type="email" placeholder="Email Address" id="email" required>
             </div>
             <div class="input-box">
-                <input type="number" placeholder="10 Digit Mobile Number" required>
-                <input type="text" placeholder="Email Subject" required>
+                <input type="number" placeholder="10 Digit Mobile Number" id="mobNumber" required>
+                <input type="text" placeholder="Email Subject" id="emailSubject" required>
             </div>
-            <textarea name="" id="" cols="30" rows="5">Your Message</textarea>
-            <input type="submit" value="Send Message" class="btn">
+            <textarea name="" placeholder="Your Message" id="message" cols="30" rows="5"></textarea>
+            <input type="submit" value="Send Message" class="btn" id = "button">
         </form>
     </section>
 
@@ -213,6 +213,9 @@
 
     <!-- Typed Js-->
     <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
+
+    <!--script for SMTP.js For sending mail-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <!-- Custom js-->
     <script src="js/script.js"></script>

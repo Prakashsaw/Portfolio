@@ -72,3 +72,36 @@ const typed1 = new Typed('.multiple-text-1', {
     backDelay: 100,
     loop: true
 });
+
+
+/*################### Script for SMTP.js server for sending mail ###################*/
+var btn = document.getElementById('button');
+btn.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    //console.log("Hi");
+
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var mobNumber = document.getElementById('mobNumber').value;
+    var emailSubject = document.getElementById('emailSubject').value;
+    var message = document.getElementById('message').value;
+
+    var body = 'Name: ' + name + '<br/> Email: ' + email + '<br/> Contact Number: ' + mobNumber + 
+    '<br/> Subject: ' + emailSubject + '<br/> Message: ' + message;
+
+    //console.log(body);
+
+    const alertMessage = "Well done! Message Sent Successfully. We will contact you soon...!";
+    
+    Email.send({
+        SecureToken : "7d73cd8d-8da7-4de8-ba07-73c186b63610",
+        To : 'prakash1999saw@gmail.com',
+        From : "prakash8873saw@gmail.com",
+        Subject : emailSubject,
+        Body : body
+    }).then(
+      message => alert(alertMessage)
+    );
+
+});
