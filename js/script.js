@@ -104,4 +104,11 @@ btn.addEventListener('click', function(e) {
       message => alert(alertMessage)
     );
 
+    //Clear Input fields after Submit 
+    const inputs = document.querySelectorAll('#name, #email, #mobNumber, #emailSubject, #message');
+
+    inputs.forEach(input => {
+        input.value = '';
+    });
+
 });
