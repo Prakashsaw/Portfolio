@@ -73,7 +73,6 @@ section {
     box-shadow: 0 0 1rem var(--main-color);
     border-radius: 4px;
     padding: 5px;
-    /*color: var(--main-color);*/
 }
 
 #menu-icon {

@@ -87,6 +87,8 @@ btn.addEventListener('click', function(e) {
     var emailSubject = document.getElementById('emailSubject').value;
     var message = document.getElementById('message').value;
 
+    
+
     var body = 'Name: ' + name + '<br/> Email: ' + email + '<br/> Contact Number: ' + mobNumber + 
     '<br/> Subject: ' + emailSubject + '<br/> Message: ' + message;
 
@@ -104,7 +106,7 @@ btn.addEventListener('click', function(e) {
       message => alert(alertMessage)
     );
 
-    //Clear Input fields after Submit 
+    //Clear Input fields after Submit and then alert message
     const inputs = document.querySelectorAll('#name, #email, #mobNumber, #emailSubject, #message');
 
     inputs.forEach(input => {
@@ -112,3 +114,4 @@ btn.addEventListener('click', function(e) {
     });
 
 });
+
