@@ -190,16 +190,23 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
 
-        <form action="#">
+        <form action="#" >
             <div class="input-box">
-                <input type="text" placeholder="Full Name" id="name" required>
-                <input type="email" placeholder="Email Address" id="email" required>
+                <input type="text" name="fullname" placeholder="Full Name" id="name" required>
+                 
+                <input type="email" name="emailaddress" placeholder="Email Address" id="email" required>
+                 
             </div>
+
             <div class="input-box">
-                <input type="number" placeholder="10 Digit Mobile Number" id="mobNumber" required>
-                <input type="text" placeholder="Email Subject" id="emailSubject" required>
+                <input type="number" name="mobilenumber" placeholder="10 Digit Mobile Number" id="mobNumber" required>
+                
+                <input type="text" name="emailsubject" placeholder="Email Subject" id="emailSubject" required>
+                
             </div>
-            <textarea name="" placeholder="Your Message" id="message" cols="30" rows="5"></textarea>
+
+            <textarea name="" name="message" placeholder="Your Message" id="message" cols="30" rows="5"></textarea>
+             
             <input type="submit" value="Send Message" class="btn" id = "button">
         </form>
     </section>

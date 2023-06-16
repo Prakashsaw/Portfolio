@@ -75,21 +75,43 @@ const typed1 = new Typed('.multiple-text-1', {
 
 
 /*################### Script for SMTP.js server for sending mail ###################*/
-var btn = document.getElementById('button');
+let btn = document.getElementById('button');
 btn.addEventListener('click', function(e) {
     e.preventDefault();
 
     //console.log("Hi");
 
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var mobNumber = document.getElementById('mobNumber').value;
-    var emailSubject = document.getElementById('emailSubject').value;
-    var message = document.getElementById('message').value;
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let mobNumber = document.getElementById('mobNumber').value;
+    let emailSubject = document.getElementById('emailSubject').value;
+    let message = document.getElementById('message').value;
 
+    //Validate that all fields are filled out or not
     
+    if(name == "" || name == null) {
+        //document.getElementById('error-name').innerHTML = " Please Enter Your Name *";
+        alert("Please Enter Your Name *");
+        return false;
+    } else if(email == "" || email == null) {
+        //document.getElementById('error-email').innerHTML = " Please Enter Your Valid Email address *";
+        alert("Please Enter Your Valid Email address *");
+        return false;
+    } else if(mobNumber == "" || mobNumber == null) {
+        //document.getElementById('error-mobnumber').innerHTML = " Please Enter Your Correct Contact Phone number *";
+        alert("Please Enter Your Contact Phone number *");
+        return false;
+    } else if(emailSubject == "" || emailSubject == null) {
+        //document.getElementById('error-emailsubject').innerHTML = " Email subject can't be empty *";
+        alert("Give suitable email subject *");
+        return false;
+    } else if(message == "" || message == null) {
+        //document.getElementById('error-messagearea').innerHTML = " Write your message here. Message text area can not be empty *";
+        alert("Message text area can't be empty *");
+        return false;
+    }
 
-    var body = 'Name: ' + name + '<br/> Email: ' + email + '<br/> Contact Number: ' + mobNumber + 
+    let body = 'Name: ' + name + '<br/> Email: ' + email + '<br/> Contact Number: ' + mobNumber + 
     '<br/> Subject: ' + emailSubject + '<br/> Message: ' + message;
 
     //console.log(body);
