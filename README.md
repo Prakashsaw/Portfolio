@@ -6,6 +6,6 @@ This is a single-pagestatic application that provides easy navigation and a seam
 You can see live demo at https://prakashsawportfolio.netlify.app/
 
 ### Tech Stacks used
-1. HTML5
-2. CSS3
-3. Javascript
+1. HTML
+2. CSS
+3. JavaScript
