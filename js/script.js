@@ -91,23 +91,23 @@ btn.addEventListener('click', function(e) {
     
     if(name == "" || name == null) {
         //document.getElementById('error-name').innerHTML = " Please Enter Your Name *";
-        alert("Please Enter Your Name *");
+        alert("*Please Enter Your Name");
         return false;
     } else if(email == "" || email == null) {
         //document.getElementById('error-email').innerHTML = " Please Enter Your Valid Email address *";
-        alert("Please Enter Your Valid Email address *");
+        alert("*Please Enter Your Valid Email address");
         return false;
     } else if(mobNumber == "" || mobNumber == null) {
         //document.getElementById('error-mobnumber').innerHTML = " Please Enter Your Correct Contact Phone number *";
-        alert("Please Enter Your Contact Phone number *");
+        alert("*Please Enter Your Contact Phone number");
         return false;
     } else if(emailSubject == "" || emailSubject == null) {
         //document.getElementById('error-emailsubject').innerHTML = " Email subject can't be empty *";
-        alert("Give suitable email subject *");
+        alert("*Give suitable email subject");
         return false;
     } else if(message == "" || message == null) {
         //document.getElementById('error-messagearea').innerHTML = " Write your message here. Message text area can not be empty *";
-        alert("Message text area can't be empty *");
+        alert("*Message text area can't be empty");
         return false;
     }
 
@@ -116,7 +116,7 @@ btn.addEventListener('click', function(e) {
 
     //console.log(body);
 
-    const alertMessage = "Well done! Message Sent Successfully. We will contact you soon...!";
+    const alertMessage = "😎Well done! Message Sent Successfully. We will contact you soon...!";
     
     Email.send({
         SecureToken : "7d73cd8d-8da7-4de8-ba07-73c186b63610",
