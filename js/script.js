@@ -1,7 +1,7 @@
 
 /*################ Toggle Icon Navbar ####################### */
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+const menuIcon = document.querySelector('#menu-icon');
+const navbar = document.querySelector('.navbar');
 
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
@@ -9,15 +9,15 @@ menuIcon.onclick = () => {
 };
 
 /*##################### Scroll section active link ######################*/
-let sections = document.querySelectorAll('section');
-let navLink = document.querySelectorAll('header nav a');
+const sections = document.querySelectorAll('section');
+const navLink = document.querySelectorAll('header nav a');
 
 window.onscroll = () => {
     sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+        const top = window.scrollY;
+        const offset = sec.offsetTop - 150;
+        const height = sec.offsetHeight;
+        const id = sec.getAttribute('id');
 
         if(top >= offset && top < offset + height) {
             navLink.forEach(links => {
@@ -28,7 +28,7 @@ window.onscroll = () => {
     });
 
     /*################ Sticky Navbar ####################### */
-    let header = document.querySelector('header');
+    const header = document.querySelector('header');
 
     header.classList.toggle('sticky', window.scrollY > 100);
 
@@ -75,48 +75,49 @@ const typed1 = new Typed('.multiple-text-1', {
 
 
 /*################### Script for SMTP.js server for sending mail ###################*/
-let btn = document.getElementById('button');
+const btn = document.getElementById('button');
 btn.addEventListener('click', function(e) {
     e.preventDefault();
 
     //console.log("Hi");
 
-    let name = document.getElementById('name').value;
-    let email = document.getElementById('email').value;
-    let mobNumber = document.getElementById('mobNumber').value;
-    let emailSubject = document.getElementById('emailSubject').value;
-    let message = document.getElementById('message').value;
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const mobNumber = document.getElementById('mobNumber').value;
+    const emailSubject = document.getElementById('emailSubject').value;
+    const message = document.getElementById('message').value;
 
     //Validate that all fields are filled out or not
-    
-    if(name == "" || name == null) {
-        //document.getElementById('error-name').innerHTML = " Please Enter Your Name *";
-        alert("*Please Enter Your Name");
+    const validationBox = document.getElementById('validation-box');
+
+    if(name === "" || name === null) {
+        validationBox.innerHTML = "*Please Enter Your Name!";
+        validationBox.className = 'error';
         return false;
-    } else if(email == "" || email == null) {
-        //document.getElementById('error-email').innerHTML = " Please Enter Your Valid Email address *";
-        alert("*Please Enter Your Valid Email address");
+    } else if(email === "" || email === null) {
+        validationBox.innerHTML = "*Please Enter Your Valid Email address!";
+        validationBox.className = 'error';
         return false;
-    } else if(mobNumber == "" || mobNumber == null) {
-        //document.getElementById('error-mobnumber').innerHTML = " Please Enter Your Correct Contact Phone number *";
-        alert("*Please Enter Your Contact Phone number");
+    } else if(mobNumber === "" || mobNumber === null) {
+        validationBox.innerHTML = "*Please Enter Your Contact Phone number!";
+        validationBox.className = 'error';
         return false;
-    } else if(emailSubject == "" || emailSubject == null) {
-        //document.getElementById('error-emailsubject').innerHTML = " Email subject can't be empty *";
-        alert("*Give suitable email subject");
+    } else if(emailSubject === "" || emailSubject === null) {
+        validationBox.innerHTML = "*Give suitable email subject!";
+        validationBox.className = 'error';
         return false;
-    } else if(message == "" || message == null) {
-        //document.getElementById('error-messagearea').innerHTML = " Write your message here. Message text area can not be empty *";
-        alert("*Message text area can't be empty");
+    } else if(message === "" || message === null) {
+        validationBox.innerHTML = "*Message text area can't be empty!";
+        validationBox.className = 'error';
         return false;
     }
 
-    let body = 'Name: ' + name + '<br/> Email: ' + email + '<br/> Contact Number: ' + mobNumber + 
+    const body = 'Name: ' + name + '<br/> Email: ' + email + '<br/> Contact Number: ' + mobNumber + 
     '<br/> Subject: ' + emailSubject + '<br/> Message: ' + message;
 
     //console.log(body);
 
-    const alertMessage = "😎Well done! Message Sent Successfully. We will contact you soon...!";
+    const alertMessage = "*😎Well done! Message Sent Successfully. We will contact you soon...!";
     
     Email.send({
         SecureToken : "7d73cd8d-8da7-4de8-ba07-73c186b63610",
@@ -124,9 +125,18 @@ btn.addEventListener('click', function(e) {
         From : "prakash8873saw@gmail.com",
         Subject : emailSubject,
         Body : body
-    }).then(
-      message => alert(alertMessage)
-    );
+    })
+    .then((message) => {
+        // validationBox.innerHTML = alertMessage;
+        // validationBox.className = 'success';
+        // alert(alertMessage);
+    })
+    .catch((error) => {
+        alert(error);
+    });
+
+    validationBox.innerHTML = alertMessage;
+    validationBox.className = 'success';
 
     //Clear Input fields after Submit and then alert message
     const inputs = document.querySelectorAll('#name, #email, #mobNumber, #emailSubject, #message');

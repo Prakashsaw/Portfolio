@@ -561,3 +561,20 @@ span {
 }
 
 
+/* ccs:  for form validation */
+.error {
+    color: red;
+    width: 500px;
+    height: 30px;
+    font-size: 20px;
+    /* margin-top: 20px; */
+  } 
+  
+.success {
+    color: green;
+    width: 700px;
+    height: 30px;
+    font-size: 20px;
+    /* margin-top: 20px; */
+}
+
