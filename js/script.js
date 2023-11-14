@@ -74,7 +74,20 @@ const typed1 = new Typed('.multiple-text-1', {
 });
 
 
+
 /*################### Script for SMTP.js server for sending mail ###################*/
+
+//function for e-mail validation
+// function ValidateEmail(input) {
+//     const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+//     if (input.value.match(validRegex)) {
+//         return false;
+//     } else {
+//         return true;
+//     }
+// }
+
 const btn = document.getElementById('button');
 btn.addEventListener('click', function(e) {
     e.preventDefault();
@@ -94,7 +107,7 @@ btn.addEventListener('click', function(e) {
         validationBox.innerHTML = "*Please Enter Your Name!";
         validationBox.className = 'error';
         return false;
-    } else if(email === "" || email === null) {
+    } else if(email === "" || email === null ) {
         validationBox.innerHTML = "*Please Enter Your Valid Email address!";
         validationBox.className = 'error';
         return false;
@@ -130,8 +143,10 @@ btn.addEventListener('click', function(e) {
         // validationBox.innerHTML = alertMessage;
         // validationBox.className = 'success';
         // alert(alertMessage);
+        console.log(message);
     })
     .catch((error) => {
+        console.log(error);
         alert(error);
     });
 
