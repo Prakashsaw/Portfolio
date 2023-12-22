@@ -10,6 +10,9 @@
     outline: none;
     scroll-behavior: smooth;
     font-family: 'Poppins', 'sans-serif';
+    /* overflow-x: scroll;    */
+    /* overflow-y: hidden;    */
+    /* white-space: nowrap; */
 }
 
 :root {
@@ -21,7 +24,7 @@
 
 html {
     font-size: 62.5%;
-    /*overflow: hidden;*/
+    overflow-x: hidden;
 }
 
 body {
@@ -405,10 +408,16 @@ span {
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
+        overflow-x: hidden;
     }
 }
 
 @media (max-width: 900px) {
+    html {
+        /* font-size: 55%; */
+        overflow-x: hidden;
+    }
+
     .header {
         padding: 2rem 3%;
     }
@@ -435,6 +444,11 @@ span {
 }
 
 @media (max-width: 725px) {
+    html {
+        /* font-size: 55%; */
+        overflow-x: hidden;
+    }
+
     #menu-icon {
         display: block;
     }
@@ -511,6 +525,11 @@ span {
 } 
 
 @media (max-width: 617px) {
+    html {
+        /* font-size: 55%; */
+        overflow-x: hidden;
+    }
+
     .portfolio-container {
         grid-template-columns: 1fr;
     }
@@ -519,6 +538,7 @@ span {
 @media (max-width: 450px) {
     html {
         font-size: 50%;
+        overflow-x: hidden;
     }
 
     .contact form .input-box input {
@@ -537,6 +557,11 @@ span {
 }
 
 @media (max-width: 365px) {
+    html {
+        /* font-size: 55%; */
+        overflow-x: hidden;
+    }
+
     .home-img img {
         width: 80vw;
     }
@@ -563,11 +588,12 @@ span {
 
 /* ccs:  for form validation */
 .error {
-    color: red;
+    color: #e25a5c;
     width: 500px;
     height: 30px;
     font-size: 20px;
-    /* margin-top: 20px; */
+    padding-right: 220px;
+    /* margin-right: 100px; */
   } 
   
 .success {
