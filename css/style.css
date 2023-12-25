@@ -37,6 +37,7 @@ section {
     padding: 10rem 9% 2rem;
 }
 
+
 .header {
     position: fixed;
     top: 0;
@@ -66,7 +67,7 @@ section {
     color: var(--text-color);
     margin-left: 3rem;
     transition: .3s;
-    padding: 5px;
+    padding: 3px;
 }
 
 .navbar a:hover,
@@ -75,7 +76,7 @@ section {
     color: var(--second-bg-color);
     box-shadow: 0 0 1rem var(--main-color);
     border-radius: 4px;
-    padding: 5px;
+    padding: 3px;
 }
 
 #menu-icon {
@@ -247,10 +248,14 @@ span {
     margin: 1rem 0 3rem;
 }
 
+/* Skills section styling */
+.skills {
+    background: var(--second-bg-color);
+}
 
 /* Portfolio section styling */
 .portfolio {
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 
 .portfolio h2 {
@@ -328,6 +333,9 @@ span {
 }
 
 /* Conatct section styling */
+.contact {
+    background: var(--second-bg-color);
+}
 .contact h2 {
     margin-bottom: 3rem;
 }
@@ -351,7 +359,7 @@ span {
     padding: 1.5rem;
     font-size: 1.6rem;
     color: var(--text-color);
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     border-radius: .8rem;
     margin: .7rem 0;
 }
@@ -377,7 +385,7 @@ span {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--second-bg-color);
+    /* background: var(--second-bg-color); */
 }
 
 .footer-text p {
@@ -582,25 +590,24 @@ span {
 }
 
 .bx-menu {
-    margin-right: 8rem;
+    margin-right: 1rem;
 }
 
 
-/* ccs:  for form validation */
+/* ccs:  for contact form validation */
 .error {
     color: #e25a5c;
-    width: 500px;
-    height: 30px;
-    font-size: 20px;
-    padding-right: 220px;
-    /* margin-right: 100px; */
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    height: 40%;
   } 
   
 .success {
     color: green;
-    width: 700px;
-    height: 30px;
-    font-size: 20px;
-    /* margin-top: 20px; */
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    height: 40%;
 }
 
