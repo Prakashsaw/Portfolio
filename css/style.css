@@ -95,6 +95,7 @@ section {
     width: 27vw;
     object-fit: cover; 
     border-radius: 200px;
+    box-shadow: 0 0 8rem var(--main-color);
     /* animation: floatImage 4s ease-in-out infinite; */
 }
 
@@ -143,7 +144,7 @@ span {
     height: 4rem;
     background: transparent;
     border: .2rem solid var(--main-color);
-    border-radius: 50%;
+    border-radius: 30%;
     font-size: 2rem;
     color: var(--main-color);
     margin: 3rem 1.5rem 3rem 0;
@@ -155,16 +156,37 @@ span {
     box-shadow: 0 0 1rem var(--main-color);
 }
 
+.btn-box a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 13rem;
+    height: 4.5rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--second-bg-color);
+    margin: 1rem .8rem 3rem 0;
+    transition: .5s ease;
+}
+
+.btn-box a:hover {
+    box-shadow: none;
+}
+
 .btn {
     display: inline-block;
     padding: 1rem 2.8rem;
     background: var(--main-color);
-    border-radius: 4rem;
+    border-radius: 1rem;
     box-shadow: 0 0 1rem var(--main-color);
     font-size: 1.6rem;
     color: var(--second-bg-color);
     letter-spacing: .1rem;
-    font-weight: 600;
+    font-weight: 500;
     transition: .5s ease;
 }
 
@@ -184,7 +206,8 @@ span {
 .about-img img{
     width: 22vw;
     object-fit: cover;
-    border-radius: 200px;
+    border-radius: 10%;
+    box-shadow: 0 0 6rem var(--main-color);
 }
 
 .heading {
@@ -251,7 +274,25 @@ span {
 /* Skills section styling */
 .skills {
     background: var(--second-bg-color);
+    /* display: flex;
+    flex-wrap: wrap; */
 }
+
+/* .tech-skills-container {  
+    width: 600px;
+    height: 500px;
+    margin-left: 120px;
+}
+.prof-skills-container {
+    width: 600px;
+    height: 500px;
+    margin-left: 120px;
+}
+
+.skill-heading {
+    text-align: center;
+    text-decoration: underline;
+} */
 
 /* Portfolio section styling */
 .portfolio {
@@ -308,7 +349,7 @@ span {
 }
 
 .portfolio-layer h4 {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .portfolio-layer p {
@@ -317,20 +358,54 @@ span {
     font-weight: 500;
 }
 
-.portfolio-layer a {
+.portfolio-btn a {
     display:  inline-flex;
     justify-content: center;
     align-items: center;
-    width: 5rem;
-    height: 5rem;
+    width: 12rem;
+    height: 4.2rem;
     background: var(--text-color);
-    border-radius: 50%;
+    /* box-shadow: 0 0 2rem var(--text-color); */
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 3rem .2rem 0rem 0rem;
+}
+.portfolio-btn a:hover {
+    /* background: var(); */
+    color: rgb(240, 94, 94);
+    box-shadow: 0 0 2rem rgb(240, 94, 94);
+    transition: .5s ease;
 }
 
-.portfolio-layer a i {
+
+/* .portfolio-btn a i {
     font-size: 3rem;
     color: var(--second-bg-color);
+} */
+
+/*
+.btn-box a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 13rem;
+    height: 4.5rem;
+    background: var(--main-color);
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--second-bg-color);
+    margin: 1rem .8rem 3rem 0;
+    transition: .5s ease;
 }
+
+.btn-box a:hover {
+    box-shadow: none;
+}
+*/
+
 
 /* Conatct section styling */
 .contact {
