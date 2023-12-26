@@ -99,20 +99,6 @@ section {
     /* animation: floatImage 4s ease-in-out infinite; */
 }
 
-/* @keyframes floatImage {
-    0% {
-        transform: translateY(0);
-    }
-
-    5% {
-        transform: translateY(-2.4rem);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-} */
-
 .home-content h3 {
     font-size: 3.2rem;
     font-weight: 700;
@@ -278,21 +264,6 @@ span {
     flex-wrap: wrap; */
 }
 
-/* .tech-skills-container {  
-    width: 600px;
-    height: 500px;
-    margin-left: 120px;
-}
-.prof-skills-container {
-    width: 600px;
-    height: 500px;
-    margin-left: 120px;
-}
-
-.skill-heading {
-    text-align: center;
-    text-decoration: underline;
-} */
 
 /* Portfolio section styling */
 .portfolio {
@@ -378,33 +349,6 @@ span {
     transition: .5s ease;
 }
 
-
-/* .portfolio-btn a i {
-    font-size: 3rem;
-    color: var(--second-bg-color);
-} */
-
-/*
-.btn-box a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 13rem;
-    height: 4.5rem;
-    background: var(--main-color);
-    border-radius: 1rem;
-    box-shadow: 0 0 1rem var(--main-color);
-    font-size: 1.6rem;
-    font-weight: 500;
-    color: var(--second-bg-color);
-    margin: 1rem .8rem 3rem 0;
-    transition: .5s ease;
-}
-
-.btn-box a:hover {
-    box-shadow: none;
-}
-*/
 
 
 /* Conatct section styling */
