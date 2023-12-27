@@ -161,6 +161,8 @@ span {
 
 .btn-box a:hover {
     box-shadow: none;
+    outline: .2rem solid white;
+    transition: .1s ease;
 }
 
 .btn {
@@ -178,6 +180,8 @@ span {
 
 .btn:hover {
     box-shadow: none;
+    outline: .2rem solid white;
+    transition: .1s ease;
 }
 
 /* About section styling*/ 
@@ -257,11 +261,246 @@ span {
     margin: 1rem 0 3rem;
 }
 
-/* Skills section styling */
+/************** Skills section styling *********** */
 .skills {
     background: var(--second-bg-color);
-    /* display: flex;
-    flex-wrap: wrap; */
+}
+
+.skill-main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 50px;
+}
+
+.skill-bar {
+    margin-bottom: 2.2rem;
+}
+
+.skill-main h3 {
+    margin-bottom: 2rem;
+    font-size: 2.7rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* Skill left */
+
+.skill-left .skill-bar .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.skill-left .skill-bar .bar {
+    width: 100%;
+    height: 1rem;
+    background-color: var(--bg-color);
+    border-radius: 1rem;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.skill-left i {
+    font-size: 2rem;
+}
+ .skill-bar .info p {
+    font-size: 1.3rem;
+    color: var(--main-color);
+ }
+.skill-bar .bar span {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.skill-bar .bar .cpp {
+    width: 85%;
+    animation: cpp 2s;
+}
+
+.skill-bar .bar .html {
+    width: 80%;
+    animation: html 2.5s;
+}
+
+.skill-bar .bar .css {
+    width: 40%;
+    animation: css 3s;
+}
+
+.skill-bar .bar .javascript {
+    width: 60%;
+    animation: javascript 3.5s;
+}
+
+.skill-bar .bar .reactjs {
+    width: 50%;
+    animation: reactjs 4s;
+}
+
+.skill-bar .bar .expressjs {
+    width: 75%;
+    animation: expressjs 4.5s;
+}
+
+.skill-bar .bar .nodejs {
+    width: 80%;
+    animation: nodejs 5s;
+}
+
+.skill-bar .bar .mongodb {
+    width: 70%;
+    animation: mongodb 5.5s;
+}
+
+@keyframes cpp {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 85%;
+    }
+}
+@keyframes html {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+@keyframes css {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 40%;
+    }
+}
+
+@keyframes javascript {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
+    }
+}
+
+@keyframes reactjs {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+
+@keyframes expressjs {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 75%;
+    }
+}
+
+@keyframes nodejs {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+@keyframes mongodb {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+/* Skill right */
+
+.professional {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 6rem;
+}
+ 
+.box {
+    margin: 0px 0;
+    flex: 1 1 15rem;
+}
+
+.box {
+    position: relative;
+}
+
+.box .text {
+    text-align: center;
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.box .text big {
+    font-size : 2rem;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box .text small {
+    display:block;
+    font-weight: 600;
+}
+
+.circle {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid #fff; */
+}
+
+.circle .points {
+    width: 3px;
+    height: 10px;
+    background-color: var(--bg-color);
+    position: absolute;
+    border-radius: 3px;
+    transform: rotate(calc(var(--i)*var(--rot))) translateY(-45px);
+}
+
+.points.marked {    /* Here ".points .marked" not worke*/
+    animation: glow 0.04s linear forwards;
+    animation-delay: calc(var(--i)*0.05s);
+}
+
+@keyframes glow {
+    0% {
+        background: var(--bg-color);
+        box-shadow: none;
+    }
+    100% {
+        background: var(--main-color);
+        box-shadow: 0 0 1rem var(--main-color);
+    }
 }
 
 

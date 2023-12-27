@@ -130,7 +130,7 @@ btn.addEventListener('click', function(e) {
 
     //console.log(body);
 
-    const alertMessage = "*😎Well done! Message Sent Successfully. We will contact you soon...!";
+    const alertMessage = "*😎Well done! Message Sent Successfully. I will respond you soon...!";
     
     Email.send({
         SecureToken : "7d73cd8d-8da7-4de8-ba07-73c186b63610",
@@ -162,3 +162,24 @@ btn.addEventListener('click', function(e) {
 
 });
 
+
+/*############### circle skill ###########################*/
+const circles = document.querySelectorAll('.circle');
+circles.forEach(elem => {
+    let dots = elem.getAttribute("data-dots");
+    let marked = elem.getAttribute("data-percent");
+    let percent = Math.floor(dots*marked / 100);
+    let points = "";
+    let rotate = 360 / dots;
+
+    for (let i = 0; i < dots; i++) {
+        points += `<div class="points" style="--i:${i}; --rot:${rotate}deg"></div>`;
+    }
+    elem.innerHTML = points;
+
+    const pointsMarked = elem.querySelectorAll('.points');
+
+    for (let i = 0; i < percent; i++) {
+        pointsMarked[i].classList.add('marked');
+    }
+})
